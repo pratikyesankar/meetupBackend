@@ -29,7 +29,7 @@ async function createEvent(newEvent) {
 }
 
 app.post("/events", async (req, res) => {
-  // Changed /resorts to /events
+ 
   try {
     const savedEvent = await createEvent(req.body)
     res
@@ -52,7 +52,7 @@ async function readAllEvents() {
   }
 }
 app.get("/events", async (req, res) => {
-  // Changed /resorts to /events
+  
   try {
     const events = await readAllEvents()
     if (events.length != 0) {
